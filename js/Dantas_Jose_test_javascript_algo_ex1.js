@@ -2,8 +2,6 @@
 var to_verify = [];
 
 function F11() {
-
-
     for (var i = 0; i < array_number.length; i++) {
         // get all elements within the current row
         var rowData = array_number[i].split(" ");
@@ -11,23 +9,11 @@ function F11() {
         var row = [];
         for (j = 0; j < rowData.length; j++) {
             // populate the new row
-            row.push(rowData[j]);
+            row.push(Number(rowData[j]));
         }
         // insert the new row
         to_verify.push(row);
-
     }
-
-    // log the 2D array
-    for (var i = 0; i < to_verify.length; i++) {
-        var row = to_verify[i];
-        var rowString = "";
-        for (var j = 0; j < row.length; j++) {
-            rowString = rowString + "," + row[j];
-        }
-        console.log(rowString);
-    }
-
 }
 
 
